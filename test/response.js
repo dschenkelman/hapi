@@ -1634,7 +1634,7 @@ describe('Response', function () {
         it('returns a file with default mime type', function (done) {
 
             var server = new Hapi.Server();
-            server.route({ method: 'GET', path: '/', handler: { file: __dirname + '/../bin/hapi' } });
+            server.route({ method: 'GET', path: '/', handler: { file: __dirname + '/../LICENSE' } });
 
             server.inject('/', function (res) {
 
@@ -1648,7 +1648,7 @@ describe('Response', function () {
             var server = new Hapi.Server({ files: { relativeTo: __dirname } });
             var handler = function (request, reply) {
 
-                reply.file('../bin/hapi').type('application/example');
+                reply.file('../LICENSE').type('application/example');
             };
 
             server.route({ method: 'GET', path: '/file', handler: handler });
