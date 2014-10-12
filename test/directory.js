@@ -319,7 +319,7 @@ describe('Directory', function () {
         var server = new Hapi.Server({ files: { relativeTo: __dirname } });
         server.route({ method: 'GET', path: '/directoryfn/{path?}', handler: { directory: { path: directoryFn } } });
 
-        server.inject('/directoryfn/defaults.js', function (res) {
+        server.inject('/directoryfn/index.js', function (res) {
 
             expect(res.statusCode).to.equal(200);
             expect(res.payload).to.contain('export');

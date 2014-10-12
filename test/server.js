@@ -11,7 +11,6 @@ var Wreck = require('wreck');
 var Lab = require('lab');
 var Hoek = require('hoek');
 var Hapi = require('..');
-var Defaults = require('../lib/defaults');
 
 
 // Declare internals

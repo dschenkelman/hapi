@@ -5,7 +5,6 @@ var Iron = require('iron');
 var Hoek = require('hoek');
 var Cryptiles = require('cryptiles');
 var Hapi = require('..');
-var Defaults = require('../lib/defaults');
 
 
 // Declare internals
